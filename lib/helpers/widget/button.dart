@@ -28,8 +28,8 @@ class ButtonElevated extends StatelessWidget {
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
             minimumSize: minSize,
+            backgroundColor: cButton ?? Colors.blue,
             shadowColor: Colors.transparent,
-            primary: cButton ?? Colors.blue,
             side: BorderSide(
               width: wBorder,
               color: cBorder,

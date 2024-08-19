@@ -186,7 +186,7 @@ class ClinicNearby extends GetView<ClinicNearbyController> {
                                         onPressed: () => _makePhoneCall(
                                             data[index]['PHONE1']),
                                         style: ElevatedButton.styleFrom(
-                                          primary: kPrimaryColor,
+                                          backgroundColor: kPrimaryColor,
                                           shape: RoundedRectangleBorder(
                                             borderRadius:
                                                 BorderRadius.circular(30),
@@ -203,7 +203,7 @@ class ClinicNearby extends GetView<ClinicNearbyController> {
                                             data[index]['LONGITUDE']
                                                 .toString()),
                                         style: ElevatedButton.styleFrom(
-                                          primary: kErrorColor,
+                                          backgroundColor: kErrorColor,
                                           shape: RoundedRectangleBorder(
                                             borderRadius:
                                                 BorderRadius.circular(30),

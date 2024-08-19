@@ -17,16 +17,19 @@ class AuthVideoCallView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        iconTheme: const IconThemeData(
-          color: kPrimaryColor,
+    return GestureDetector(
+      onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
+      child: Scaffold(
+        appBar: AppBar(
+          elevation: 0,
+          iconTheme: const IconThemeData(
+            color: kPrimaryColor,
+          ),
+          backgroundColor: kBackgroundColor,
         ),
-        backgroundColor: kBackgroundColor,
-      ),
-      body: Obx(
-        () => body(context),
+        body: Obx(
+          () => body(context),
+        ),
       ),
     );
   }

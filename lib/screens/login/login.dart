@@ -97,7 +97,7 @@ class _LoginState extends State<Login> {
             auth.passwordController.text,
           ),
           style: ElevatedButton.styleFrom(
-            primary: kPrimaryColor,
+            backgroundColor: kPrimaryColor,
           ),
           icon: const Icon(Icons.login),
           label: const Text("Masuk"),
@@ -125,7 +125,7 @@ class _LoginState extends State<Login> {
                   ),
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: kInfoColor,
+                  backgroundColor: kInfoColor,
                 ),
                 icon: const Icon(Icons.location_on),
                 label: const Text('Klinik Terdekat'),
@@ -142,7 +142,7 @@ class _LoginState extends State<Login> {
                   ),
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: kInfoColor,
+                  backgroundColor: kInfoColor,
                 ),
                 icon: const Icon(Icons.search),
                 label: const Text('Pencarian Klinik'),
@@ -166,7 +166,7 @@ class _LoginState extends State<Login> {
                   })
               : null,
           style: ElevatedButton.styleFrom(
-            primary: kErrorColor,
+            backgroundColor: kErrorColor,
           ),
           icon: const Icon(Icons.phone),
           label: _hasCallSupport
@@ -179,7 +179,7 @@ class _LoginState extends State<Login> {
             launched = _sendEmail(_email);
           }),
           style: ElevatedButton.styleFrom(
-            primary: kWarningColor,
+            backgroundColor: kWarningColor,
           ),
           icon: const Icon(Icons.email),
           label: const Text('Layanan Email'),

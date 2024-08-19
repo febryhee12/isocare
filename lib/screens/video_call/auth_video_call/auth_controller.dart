@@ -22,7 +22,7 @@ class AuthController extends GetxController with BaseController {
   late var nameFill = homeController.profileUser.value.name;
   late var emailFill = homeController.profileUser.value.email;
   late var typeFill = homeController.profileUser.value.type;
-  late var addressFill = homeController.profileUser.value.address;
+  late var addressFill = homeController.profileUser.value.address ?? 'rumah';
   late var birthDateFill = homeController.profileUser.value.birthday;
   late var phoneFill = homeController.profileUser.value.phone;
   late TextEditingController name;
@@ -69,6 +69,11 @@ class AuthController extends GetxController with BaseController {
     if (formKey.currentState!.validate()) {
       SharedPreferences pref = await SharedPreferences.getInstance();
       var token = pref.getString(BaseUrl.token);
+      print(typeFill);
+      print(email.text);
+      print(phoneNumber.text);
+      print(formatDate);
+
       var response = await BaseClient().postHB(
         BaseUrl.baseUrl,
         BaseUrl.updateData,
@@ -81,6 +86,7 @@ class AuthController extends GetxController with BaseController {
           'member[birthday]': formatDate,
         },
       ).catchError(handleError);
+      print(response);
       var data = await jsonDecode(response);
       if (data['status'] == true) {
         Get.off(RecipientAddrerssView());

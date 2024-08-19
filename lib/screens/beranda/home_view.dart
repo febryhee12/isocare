@@ -9,7 +9,6 @@ import 'package:isocare/screens/family/family_view.dart';
 import '../../helpers/widget/button.dart';
 import '../../helpers/widget/textfield.dart';
 import '../chat/waitng/waiting_support.dart';
-import '../chat/waitng/waiting_view.dart';
 import '../dashboard/dashboard_controller.dart';
 import '../video_call/recipient_address/recipient_address_view.dart';
 import '/helpers/ui_data.dart';
